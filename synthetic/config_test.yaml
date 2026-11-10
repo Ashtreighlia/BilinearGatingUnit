@@ -1,0 +1,15 @@
+units:
+  types:
+    - Maxout
+    - MoE
+    - BDGU
+    - BMGU
+    - BRGU
+
+grid_search:
+  seeds:
+    start: 0
+    steps: 25
+
+training:
+  name: "test_26-06-15"

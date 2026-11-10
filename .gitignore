@@ -1,0 +1,7 @@
+# --- Python cache and local environment ---
+*/__pycache__/
+venv/
+.venv/
+
+# Datasets and generated data files
+*.db

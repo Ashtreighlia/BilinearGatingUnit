@@ -1,0 +1,33 @@
+units:
+  types:
+    - Maxout
+    - MoE
+    - BDGU
+    - BMGU
+    - BRGU
+  parameters: [400000]
+
+data:
+  split: [0.2]
+  batch_size: [1024]
+
+grid_search:
+  lr:
+    max: 0.01
+    min: 0.0001
+    steps: 20
+  seeds:
+    start: 0
+    steps: 5
+  dropout:
+    max: 0.5
+    min: 0.0
+    steps: 1
+
+training:
+  name: "evaluation_26-06-16"
+  max_epochs: 100
+  criterions: [ce]
+  optimizers: [adam]
+  global_seed: 42
+  concurrent_gpu_jobs: 2

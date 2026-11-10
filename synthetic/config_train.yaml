@@ -1,0 +1,51 @@
+units:
+  types:
+    - Maxout
+    - MoE
+    - BDGU
+    - BMGU
+    - BRGU
+  parameters: [32]
+
+data:
+  resolution: 1000
+  mode:
+    - overfitting
+    - generalization
+  splits:
+    train: 0.25
+    val: 0.375
+    test: 0.375
+  type:
+    - x2
+    - exp
+    - log
+    - x3
+    - poly
+    - sin
+    - sincos
+    - sin4cos
+    - wave
+    - abs
+  dimensions: [3,2,1]
+
+grid_search:
+  lr:
+    max: 0.1
+    min: 0.0001
+    steps: 5
+  seeds:
+    start: 0
+    steps: 5
+  dropout:
+    max: 0.5
+    min: 0.0
+    steps: 2
+
+training:
+  name: "evaluation_25-11-08"
+  max_epochs: 100000
+  criterions: [mse]
+  optimizers: [adam]
+  global_seed: 42
+  concurrent_gpu_jobs: 4
