@@ -12,4 +12,4 @@ grid_search:
     steps: 25
 
 training:
-  name: "test_26-06-17"
+  name: "test"

@@ -43,7 +43,7 @@ grid_search:
     steps: 2
 
 training:
-  name: "evaluation_25-11-08"
+  name: "eval"
   max_epochs: 100000
   criterions: [mse]
   optimizers: [adam]
